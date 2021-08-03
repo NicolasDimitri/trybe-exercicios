@@ -1,3 +1,17 @@
-const squirtle = "melhor pokemon inicial";
+let estado;
 
-console.log(!squirtle); // false!
+switch (estado) {
+    case "":
+        console.log("aprovada")
+        break;
+        case "":
+            console.log("lista")
+            break;
+            case "":
+            console.log("reprovada")
+            break;
+            
+    default:
+        console.log("não se aplica")
+        break;
+}
