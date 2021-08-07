@@ -62,7 +62,41 @@ if (impares === 0) {
 
 // 7.Utilizando for , descubra qual o menor valor contido no array e imprima-o;
 
+let menorValor = numbers[0];
 for (let index = 0; index < numbers.length; index += 1) {
-    ;
+    if (numbers[index] < menorValor) {
+        menorValor = numbers[index];
+    };
     
 }
+console.log(menorValor)
+
+// 8.Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
+
+let arrayDe25 = [];
+for (let index = 1; index <= 25; index += 1) {
+    arrayDe25.push(index);
+    
+}
+console.log(arrayDe25);
+
+// 9.Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+
+for (let index = 0; index < arrayDe25.length; index += 1) {
+    console.log(arrayDe25[index] / 2);
+}
+
+// Bonus;
+// 1.Ordene o array numbers em ordem crescente e imprima seus valores;
+
+for (let direita = 1; direita < numbers.length; direita += 1) {
+    for (let esquerda = 0; esquerda < direita; esquerda += 1) {
+        if (numbers[esquerda] > numbers[direita]) {
+            let posicao = numbers[direita];
+            numbers[direita] = numbers[esquerda];
+            numbers[esquerda] = posicao;
+        }
+    }
+    
+}
+console.log(numbers)
