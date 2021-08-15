@@ -1,27 +1,22 @@
-.caixa {
-    color: white;
-    display: inline-block;
-    line-height: 50px;
-    text-align: center;
-    vertical-align: top;
-  }
-  
-  .width-and-height {
-    height: 50px;
-    width: 50px;
-  }
-  
-  /* insira na classe abaixo um padding de 20px para aplicá-lo aos itens B, C e D */
-  .padding {
-      padding: 20px;  
-  }
-  
-  /* insira na classe abaixo uma margem de 30px para aplicá-la aos itens C e D */
-  .margin {
-      margin: 30px;  
-  }
-  
-  /* insira na classe abaixo uma borda com valor '5px solid black' para aplicá-la ao item D */
-  .border {
-      border: 5px solid black;    
-  }
+div:hover {
+    border: 10px solid black;  
+}
+div:nth-child(3) {
+    background-color: blue;
+}
+div:nth-child(4) {
+    background-color: red;
+}
+div:nth-child(5) {
+    height: 100px;
+    background-color: yellow;
+}
+div:nth-child(6) {
+    background-color: darkblue;
+}
+div:nth-child(7) {
+    background-color: lightblue;
+}
+h3:nth-child(odd) {
+    font-style: italic;
+}
