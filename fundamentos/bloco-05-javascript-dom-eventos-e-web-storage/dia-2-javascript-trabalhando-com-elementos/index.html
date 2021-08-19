@@ -59,8 +59,37 @@
     <script>
       // COLOQUE SEU CÓDIGO AQUI
     //  1. Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
+    let body = document.getElementsByTagName("body")[0];
+    let texto = "Exercícios 5.2 - JavaScript DOM como filho da tag body";
+    let tagH1 = document.createElement("h1");
 
+    body.appendChild(tagH1);
+
+    tagH1.innerText = texto;
+
+    // 2. Adicione a tag main com a classe main-content como filho da tag body ;
+    let tagMain = document.createElement("main");
+    tagMain.className = "main-content";
+    body.appendChild(tagMain);
+
+    // 3. Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+    let tagSection = document.createElement("section");
+    tagSection.className = "center-content";
+    tagMain.appendChild(tagSection);
+
+    // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+    let tagP = document.createElement("p");
+    tagSection.appendChild(tagP);
+    tagP.innerText = "JavaScript é mto bom"
+
+    // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+    let tagSectionLeft = document.createElement("section");
+    tagSectionLeft.className = "left-content";
+    tagMain.appendChild(tagSectionLeft);
+
+    // 6. Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
     
+
     </script>
   </body>
 </html>
