@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+
+  <body>
+    <fieldset>
+      <label for="name"
+        >Name:
+        <input data-validate-field="name" type="text" maxlength="40" id="name" required />
+      </label>
+      <label for="email" 
+        >Email:
+        <input data-validate-field="email" type="text" maxlength="50" required id="email" />
+      </label>
+      <label for="cpf"
+        >CPF:
+        <input type="text" required data-validate-field="cpf" id="cpf" maxlength="11" />
+      </label>
+      <label for="endereço"
+        >Endereço:
+        <input id="endereço" type="text" data-validate-field="endereço" required maxlength="200" />
+      </label>
+      <label for="cidade"
+        >Cidade:
+        <input data-validate-field="cidade" type="text" name="cidade" id="cidade" required maxlength="28" />
+      </label>
+      <label for="estado"
+        >Estado:
+        <select name="estado" id="estado" data-validate-field="estado" required></select>
+      </label>
+      <div>
+        <label for="tipo">Tipo: </label>
+        <input type="radio" name="tipo" id="casa" required />
+        <label for="casa">casa</label>
+        <input type="radio" name="tipo" id="apartamento" required />
+        <label for="apartamento">apartamento</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <label for="resumo">Resumo do curriculo:</label>
+      <textarea
+        name="curriculo"
+        id="resumo"
+        required
+        maxlength="1000"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <label for="date">Data</label>
+      <input type="date" required id="date">
+    </fieldset>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
