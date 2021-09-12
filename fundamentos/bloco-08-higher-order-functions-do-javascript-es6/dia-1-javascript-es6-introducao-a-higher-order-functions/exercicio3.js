@@ -10,7 +10,7 @@ const pontuacaoFinal = (gabarito, testesParaAvaliar, analisaRespostas) => {
     );
     contador += resultadoDaResposta;
   }
-  return contador;
+  return `Resultado final: ${contador} corretas`;
 };
 
 console.log(
