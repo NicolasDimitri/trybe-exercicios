@@ -64,3 +64,48 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
+
+// 2 - Crie uma string com os nomes de todas as pessoas autoras.
+
+
+const expectedResult1 = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
+
+function reduceNames() {
+  // escreva seu código aqui
+  return books.reduce(((sctringDeNomes, nome) => sctringDeNomes.concat(`${nome.author.name}, `)), "").trim().slice(0, -1).concat(".")
+}
+
+assert.strictEqual(reduceNames(), expectedResult1);
+
+// 3 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
+
+const expectedResult2 = 43;
+
+function averageAge() {
+  // escreva seu código aqui
+  return books.reduce(((mediaDeIdade, idade) => mediaDeIdade + (idade.releaseYear - idade.author.birthYear)), 0) / books.length
+}
+
+assert.strictEqual(averageAge(), expectedResult2);
+
+// 4 - Encontre o livro com o maior nome.
+
+
+const expectedResult = {
+    id: 1,
+    name: 'As Crônicas de Gelo e Fogo',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948,
+    },
+    releaseYear: 1991,
+  };
+  
+  function longestNamedBook() {
+    // escreva seu código aqui
+    return books.reduce((maiorNome, nome) => nome.name.length > maiorNome.name.length ? nome : maiorNome)
+  }
+  
+  assert.deepStrictEqual(longestNamedBook(), expectedResult);
+
