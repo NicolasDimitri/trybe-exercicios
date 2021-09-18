@@ -1,14 +1,50 @@
-const assert = require('assert');
+const jsonInfo = `{
+  "muitasEmpresasUsam": [
+    "Google",
+    "Twitter",
+    "Facebook",
+    "etc..."
+  ],
+  "temVariasVantagens": [
+    "Legível",
+    "Fácil de usar",
+    "Leve",
+    "Popular",
+    "Versátil"
+  ],
+  "muitasLinguagensDaoSuporte": [
+    "Python",
+    "C",
+    "C++",
+    "Java",
+    "PHP"
+  ]
+}`;
 
-const pushNumber = (list, number) => {
-  list.push(number);
-  console.log(list);
-};
+const usoJSONPorque = JSON.parse(jsonInfo);
 
-let numbers = [];
+const corporationsList = document.getElementById('corporations-used-by');
+const advantagesList = document.getElementById('advantages');
+const languagesList = document.getElementById('languages-used-by');
 
-setTimeout(() => pushNumber(numbers, 1), 3000);
-pushNumber(numbers, 2);
-pushNumber(numbers, 3);    
+usoJSONPorque.muitasEmpresasUsam.map((empresa) => {
+  const newLi = document.createElement('li');
+  newLi.innerText = empresa;
+  corporationsList.appendChild(newLi);
+});
 
-setTimeout(() => assert.deepStrictEqual(numbers, [2, 3, 1]), 3000);
+usoJSONPorque.temVariasVantagens.map((vantagens) => {
+  const newLi = document.createElement('li');
+  newLi.innerText = vantagens;
+  advantagesList.appendChild(newLi);
+});
+
+usoJSONPorque.muitasLinguagensDaoSuporte.map((linguagens) => {
+  const newLi = document.createElement('li');
+  newLi.innerText = linguagens;
+  languagesList.appendChild(newLi);
+});
+
+fetch(_)
+
+setTimeout(_,)
