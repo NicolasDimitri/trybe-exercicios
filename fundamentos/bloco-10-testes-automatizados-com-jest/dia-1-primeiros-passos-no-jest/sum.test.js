@@ -22,6 +22,6 @@ describe('sum', () => {
   it('throw error message =  "parameters must be numbers"', () => {
     expect(() => {
       sum(4, '5');
-    }).toThrow('parameters must be numb');
+    }).toThrow('parameters must be numbers');
   });
 });
