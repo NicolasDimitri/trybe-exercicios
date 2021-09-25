@@ -40,4 +40,10 @@ describe('encode e decode', () => {
     it('converte o numero "5" na vogal "u"', () => {
         expect(decode('5')).toStrictEqual("u")
     })
+    it('verifica quantidade de letras', () => {
+        expect(decode('uma frase de teste').length).toStrictEqual(18)
+    })
+    it('verifica quantidade de letras', () => {
+        expect(encode('uma frase de teste').length).toStrictEqual(18)
+    })
 })
