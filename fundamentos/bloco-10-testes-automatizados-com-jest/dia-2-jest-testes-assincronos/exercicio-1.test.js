@@ -1,4 +1,3 @@
-const { it } = require('@jest/globals');
 const uppercase = require('./exercicio-1');
 
 describe('Testa se a função retorna letras maiusculas', () => {

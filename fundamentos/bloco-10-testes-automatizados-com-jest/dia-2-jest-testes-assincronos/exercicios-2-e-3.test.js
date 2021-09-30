@@ -1,6 +1,3 @@
-const exp = require('constants');
-const { get } = require('http');
-
 const users = [
   { id: 1, name: 'Mark' },
   { id: 2, name: 'Paul' },
