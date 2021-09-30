@@ -71,4 +71,4 @@ const {
     it('should have the city of Piauí', () => {
       expect(isCity('Piauí')).toBeTruthy();
     });
-  });
+  }); 
