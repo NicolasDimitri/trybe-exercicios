@@ -34,3 +34,4 @@ describe("deve renderizar o componente App", () => {
     expect(notFoundTitle).toBeInTheDocument()
   })
 });
+ 
